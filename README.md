@@ -29,5 +29,10 @@ https://www.youtube.com/watch?v=BxQY3D9s_Mc&list=PLoSZs76tLtJhf_xy-n2QGVurW5nWQN
  ここから有料ノート
 
  SNS リンクが出ない
+表示崩れあり
+動くから次行く
 
- 
+ 次
+
+ https://www.youtube.com/watch?v=MJr3u2lKp3E&list=PLoSZs76tLtJhf_xy-n2QGVurW5nWQNW8g&index=4
+
