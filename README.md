@@ -15,4 +15,13 @@ https://www.youtube.com/watch?v=BxQY3D9s_Mc&list=PLoSZs76tLtJhf_xy-n2QGVurW5nWQN
  1179  python3 manage.py runserver
 
  次
+ 
  https://www.youtube.com/watch?v=zI18gQPzdCI&list=PLoSZs76tLtJhf_xy-n2QGVurW5nWQNW8g&index=2
+
+
+ アイコン画像が縦長になってしまうが
+ リンクなどは動く
+
+ 次
+
+ https://www.youtube.com/watch?v=t-FXOtMSKF0&list=PLoSZs76tLtJhf_xy-n2QGVurW5nWQNW8g&index=3
