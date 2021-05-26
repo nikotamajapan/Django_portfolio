@@ -25,3 +25,9 @@ https://www.youtube.com/watch?v=BxQY3D9s_Mc&list=PLoSZs76tLtJhf_xy-n2QGVurW5nWQN
  次
 
  https://www.youtube.com/watch?v=t-FXOtMSKF0&list=PLoSZs76tLtJhf_xy-n2QGVurW5nWQNW8g&index=3
+
+ ここから有料ノート
+
+ SNS リンクが出ない
+
+ 
