@@ -53,3 +53,21 @@ class Education(models.Model):
     def __str__(self):
         return self.course
      
+class Software(models.Model):
+    name = models.CharField('Software', max_length=100)
+    level = models.CharField('level', max_length=100)
+    percentage = models.IntegerField('percentage')
+
+    def __str__(self):
+        return self.name
+        
+     
+class Technical(models.Model):
+    name = models.CharField('Technical', max_length=100)
+    level = models.CharField('level', max_length=100)
+    percentage = models.IntegerField('percentage')
+
+    def __str__(self):
+        return self.name
+
+
