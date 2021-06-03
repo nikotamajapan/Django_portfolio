@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% load widget_tweaks %}
+
+{% block contact %}
+
+<div class="card text-center contact mx-auto rounded">
+    <div class="card-body">
+        <h2 class="mb-4">contact me</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {% render_field form.name class='form-control' placeholder='name' %}
+            </div>
+            <div class="mb-3">
+                {% render_field form.email class='form-control' placeholder='email' %}
+            </div>
+            <div class="mb-3">
+                {% render_field form.message class='form-control' placeholder='message' %}
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-warnig" type='submit'><i
+                        class="fas fa-paper-plane"></i>sousin suru</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

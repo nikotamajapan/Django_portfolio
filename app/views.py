@@ -1,6 +1,11 @@
+from django.shortcuts import render, redirect
 from django.views.generic import View
-from django.shortcuts import render
+from .forms import ContactForm
 from .models import Profile, Work, Education, Experience, Software, Technical
+from django.conf import settings
+from django.core.mail import BadHeaderError, EmailMessage
+from django.http import HttpResponse
+import textwrap
 
 
 class IndexView(View):
@@ -39,6 +44,55 @@ class AboutView(View):
             'software_data': software_data,
             'technical_data': technical_data,
         })
-        
-                
+                        
+class ContactView(View):
+    def get(self, request, *args, **kwargs):
+        form = ContactForm(request.POST or None)
+        return render(request, 'app/contact.html', {
+            'form': form
+        })
+
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(request.POST or None)
+
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            subject = 'otoiawase'
+            contact = textwrap.dedent('''
+                autoreply
+                ---
+                {name}
+                {email}
+                {message}
+                ---
+                ''').format(
+                name=name,
+                email=email,
+                message=message
+            )
+        to_list = [email]
+        bcc_list = [settings.EMAIL_HOST_USER]
+
+        try:
+            message = EmailMessage(subject=subject, body=contact, to=to_list, bcc=bcc_list)
+            message.send()
+        except BadHeaderError:
+            return HttpResponse('mukouna header')
+
+        return redirect('index')
+
+        return render(request, 'app/contact.html', {
+            'form': form
+        })
+
+class ThanksView(View):
+    def post(self, request, *args, **kwargs):
+        return render(request, 'app/thanks.html')
+
+
+class ThanksView(View):
+    def post(self, request, *args, **kwargs):
+        return render(request, 'app/thanks.html')
         
